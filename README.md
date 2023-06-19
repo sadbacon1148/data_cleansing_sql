@@ -1,7 +1,7 @@
 
 # Data Cleansing with SQL (on BigQuery)
 
-This repository contains SQL code for data cleansing on a dataset using BigQuery. The code aims to clean the dataset before utilising it for the Authors Executive Dashboard on Microsoft Power BI.
+This repository contains SQL code for data cleansing on a dataset using BigQuery. The code aims to clean the dataset before utilising it for the Authors Executive Dashboard on Microsoft Power BI. (https://happy-cheque-975.notion.site/Allie-s-Portfolio-f47523a9e71c4f3997ab260746d9c8ee)
 
 ## Objective
 
