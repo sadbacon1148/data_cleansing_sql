@@ -11,22 +11,8 @@ The objective is to clean the Audible dataset to create an executive dashboard f
 
 The tech stack used for this project includes:
 
-- Google Cloud Platform (Cloud Storage, BigQuery) for storing, cleaning, and preparing the Audible dataset before visualization.
-- Microsoft Power BI, which connects with the Google BigQuery connector to visualize the data in real-time (imports at intervals).
-
-
-## Code Explanation
-
-The SQL code provided performs the following operations:
-
-1. First, I create a common table expression (CTE) called `runtime_calc` to calculate the converted audio runtime of each book as it comes in with `String` datatype. It extracts the hours and minutes from the `Audio_Runtime` field and converts them to a `numeric` value representing the total runtime in hours. 
-
-    The difficulty/annoyance lies in when there're ranges of hours and mins representation, I have broken them down into hour and min separately. i.e. 5 hrs, 5 hrs and 5 mins, 1 hr, 5 mins, and 1 min. Additionally, this CTE also takes care of edge cases when the `Audio_Runtime` has the value of  i.e. 'Not Yet Known', 'Less than 1 minute' by making them `NULL` & converting to `0` instead of having it as string datatype.
-
-2. Then joins the `audible_data` table with the `runtime_calc` CTE to retrieve the necessary fields for further analysis.
-3. Cleans the data by removing unwanted characters and converting the `Rating` field to a float value.
-4. Retrieves the cleaned dataset, including fields such as `timestamp`, `country`, `user_id`, `Book_ID`, `Book_Title`, `Book_Subtitle`, `Book_Author`, `Book_Narrator`, `Audio_Runtime`, `converted_audio_runtime`, `Audiobook_Type`, `Categories`, `Total_No__of_Ratings`, `Price`, and `THBPrice`.
-
+1. Google Cloud Platform (Cloud Storage, BigQuery) for storing, cleaning, and preparing the Audible dataset before visualization.
+2. Microsoft Power BI, which connects with the Google BigQuery connector to visualize the data in real-time (imports at intervals).
 
 
 ## Code Explanation
@@ -46,10 +32,12 @@ The provided SQL code performs the following operations:
 
 
 # Key Takeaways
+
 1. It would have been better if I had thought more thoroughly about how and why I needed the runtime data. In the end, I realized that the duration of the audiobook might not be particularly useful in giving the author an overview of what's happening with their books on the Audible platform. This experience was crucial for me to constantly remind myself, even before starting any work, to consider what I am doing, why I am doing it, who my audience is, and what kind of dashboard they expect to see.
 2. Nonetheless, I also learned how to start cleaning data when receiving very messy data. I explored the data through simple SQL `DISTINCT` queries and repeatedly checked if my code was finally usable.
 
 # Future improvement
+
 - I should have a better approach to exploring data, especially when it comes in the `String` datatype. It can be a bit challenging to identify patterns using SQL alone. I might consider using Python to generate a word cloud or any other quick and easy visualization to observe the data patterns more effectively.
 
 
