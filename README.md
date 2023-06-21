@@ -1,6 +1,9 @@
 
 # Data Cleansing with SQL (on BigQuery)
 
+![Picture 1](https://github.com/sadbacon1148/data_cleansing_sql/assets/32740384/4be85fa0-579f-49ba-a77e-751a0952063a)
+
+
 This repository contains SQL code for data cleansing on a dataset using BigQuery. The code aims to clean the dataset before utilising it for the Authors Executive Dashboard on Microsoft Power BI. (https://happy-cheque-975.notion.site/Allie-s-Portfolio-f47523a9e71c4f3997ab260746d9c8ee)
 
 ## Objective
@@ -11,8 +14,8 @@ The objective is to clean the Audible dataset to create an executive dashboard f
 
 The tech stack used for this project includes:
 
-1. Google Cloud Platform (Cloud Storage, BigQuery) for storing, cleaning, and preparing the Audible dataset before visualization.
-2. Microsoft Power BI, which connects with the Google BigQuery connector to visualize the data in real-time (imports at intervals).
+1. Google Cloud Platform (Cloud Storage, BigQuery) for storing, cleaning, and preparing the Audible dataset before visualisation.
+2. Microsoft Power BI, which connects with the Google BigQuery connector to visualise the data in real-time (imports at intervals).
 
 
 ## Code Explanation
@@ -33,12 +36,12 @@ The provided SQL code performs the following operations:
 
 # Key Takeaways
 
-1. It would have been better if I had thought more thoroughly about how and why I needed the runtime data. In the end, I realized that the duration of the audiobook might not be particularly useful in giving the author an overview of what's happening with their books on the Audible platform. This experience was crucial for me to constantly remind myself, even before starting any work, to consider what I am doing, why I am doing it, who my audience is, and what kind of dashboard they expect to see.
+1. It would have been better if I had thought more thoroughly about how and why I needed the runtime data. In the end, I realised that the duration of the audiobook might not be particularly useful in giving the author an overview of what's happening with their books on the Audible platform. This experience was crucial for me to constantly remind myself, even before starting any work, to consider what I am doing, why I am doing it, who my audience is, and what kind of dashboard they expect to see.
 2. Nonetheless, I also learned how to start cleaning data when receiving very messy data. I explored the data through simple SQL `DISTINCT` queries and repeatedly checked if my code was finally usable.
 
 # Future improvement
 
-- I should have a better approach to exploring data, especially when it comes in the `String` datatype. It can be a bit challenging to identify patterns using SQL alone. I might consider using Python to generate a word cloud or any other quick and easy visualization to observe the data patterns more effectively.
+- I should have a better approach to exploring data, especially when it comes in the `String` datatype. It can be a bit challenging to identify patterns using SQL alone. I might consider using Python to generate a word cloud or any other quick and easy visualisation to observe the data patterns more effectively.
 
 
 
